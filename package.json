@@ -1,0 +1,13 @@
+{
+  "name": "pass",
+  "version": "0.1.0",
+  "description": "a service for generating passwords",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "randy brown",
+  "license": "MIT",
+  "dependencies": {
+    "dimitri": "^0.1.2"
+  }
+}
