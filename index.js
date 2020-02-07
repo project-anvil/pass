@@ -20,7 +20,7 @@ export default ({config, boundary, logger, messageHandler, entityMapper}) => [{
     resource: "/",
     behaviors: [
         {endpoint: "/", method: "get", behavior: [
-            (req, res, next) => res.send(req.body.length ? {password: passwordGen(req.body.length)} : 400)
+           (req, res, next) => req.body.length ? res.send({password: passwordGen(req.body.length)}) : next({status: 400})
         ]},
     ]
 }];
