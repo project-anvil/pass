@@ -2,7 +2,7 @@ import dimitri from 'dimitri';
 
 const {getString} = dimitri;
 
-const createPasswordGen = (alpha=true, numeric=true, special=true) => {
+const createPasswordGen = (alpha=true, numeric=true, special=false) => {
     const passwordGen = getString(`${
         alpha ? "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" : ""
     }${
