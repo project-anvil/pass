@@ -1,6 +1,6 @@
 {
   "name": "pass",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "a service for generating passwords",
   "main": "index.js",
   "author": "randy brown",
