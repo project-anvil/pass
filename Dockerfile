@@ -1,10 +1,15 @@
-FROM dutchoven/express AS build
+FROM node:16-alpine AS build
+# Add a work directory
+WORKDIR /app
+# Cache and Install dependencies
+COPY . .
+RUN npm install
 
-COPY package*.json /app/
-RUN npm ci
+# Build the app
+RUN npm install --global rollup
+RUN rollup -c
 
 FROM dutchoven/express
 
 # this is dangerous for larger apps due to the chances of collision
-COPY --from=build /app/node_modules ./node_modules
-COPY index.js /app/src/resources/
+COPY --from=build /app/dist/index.js /app/src/resources/index.js
