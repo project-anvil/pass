@@ -11,5 +11,4 @@ RUN rollup -c
 
 FROM dutchoven/express
 
-# this is dangerous for larger apps due to the chances of collision
 COPY --from=build /app/dist/index.js /app/src/resources/index.js
