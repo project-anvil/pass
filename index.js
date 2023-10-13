@@ -1,6 +1,4 @@
-import dimitri from 'dimitri';
-
-const {getString} = dimitri;
+import { getString } from 'dimitri';
 
 const createPasswordGen = (alpha=true, numeric=true, special=false) => {
     const passwordGen = getString(`${
